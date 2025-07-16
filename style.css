@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+:root {
+  --primary-glow: lime;
+  --accent-glow: aqua;
+  --soft-glow: palegreen;
+  --background-start: navy;
+  --background-end: black;
+}
+
+body {
+  font-family: "Orbitron", "Segoe UI", Arial, sans-serif;
+  padding: 30px;
+  margin: auto;
+  max-width: 700px;
+  background: radial-gradient(
+    circle at top left,
+    var(--background-start),
+    var(--background-end)
+  );
+  color: var(--accent-glow);
+  text-shadow: 0 0 4px var(--accent-glow);
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: var(--primary-glow);
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+#splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: lime;
+  font-family: "Orbitron", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 999;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: fadeSplash 2.5s ease forwards;
+  opacity: 1;
+}
+
+@keyframes fadeSplash {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98);
+    visibility: hidden;
+  }
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: midnightblue;
+  color: var(--accent-glow);
+  border: 2px solid var(--accent-glow);
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--primary-glow);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 12px var(--primary-glow);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--soft-glow);
+}
+
+.checklist {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--accent-glow);
+}
+
+progress#strengthMeter {
+  width: 100%;
+  height: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: midnightblue;
+  border: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: midnightblue;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--primary-glow);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--primary-glow);
+}
+
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: black;
+}

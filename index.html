@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberVault – Password Strength Checker</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="lime" />
+  </head>
+  <body>
+    <canvas id="matrixCanvas"></canvas>
+
+    <div id="splashScreen">
+      <h1>🛡️ CyberVault</h1>
+      <p>Initializing security protocols...</p>
+    </div>
+
+    <main id="mainApp" style="display: none">
+      <h2>🔐 Password Strength Checker</h2>
+
+      <div class="form-group">
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter password"
+          autocomplete="off"
+        />
+      </div>
+
+      <progress id="strengthMeter" value="0" max="6"></progress>
+      <div class="result" id="strengthResult"></div>
+      <div class="checklist" id="criteriaList"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
