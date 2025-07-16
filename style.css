@@ -10,8 +10,8 @@
 
 body {
   font-family: "Orbitron", "Segoe UI", Arial, sans-serif;
-  padding: 30px;
   margin: auto;
+  padding: 30px;
   max-width: 700px;
   background: radial-gradient(
     circle at top left,
@@ -67,8 +67,15 @@ h2 {
   }
 }
 
-input[type="password"] {
-  width: 100%;
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#passwordInput {
+  flex: 1;
   padding: 12px;
   font-size: 16px;
   background-color: midnightblue;
@@ -79,10 +86,19 @@ input[type="password"] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="password"]:focus {
+#passwordInput:focus {
   outline: none;
   border-color: var(--primary-glow);
   box-shadow: 0 0 10px var(--primary-glow);
+}
+
+#togglePassword {
+  margin: 0;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: var(--accent-glow);
 }
 
 button {
@@ -146,8 +162,8 @@ progress::-moz-progress-bar {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
   background: black;
 }

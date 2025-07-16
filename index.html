@@ -21,14 +21,16 @@
       <h2>🔐 Password Strength Checker</h2>
 
       <div class="form-group">
-        <input
-          type="password"
-          id="passwordInput"
-          placeholder="Enter password"
-          autocomplete="off"
-        />
-        <label>
-          <input type="checkbox" id="togglePassword" /> Show Password
+        <label style="display: flex; align-items: center; gap: 10px">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password"
+            autocomplete="off"
+            style="flex-grow: 1"
+          />
+          <input type="checkbox" id="togglePassword" />
+          <span style="font-size: 14px">Show</span>
         </label>
       </div>
 
